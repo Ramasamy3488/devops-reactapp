@@ -1,8 +1,7 @@
 FROM node:18 as build
 WORKDIR /app
 RUN apt-get update && apt-get install git -y
-RUN git clone https://github.com/Ramasamy3488/devops-reactapp.git
-WORKDIR /app/devops-reactapp
+RUN git clone https://github.com/Ramasamy3488/devops-reactapp.git .
 RUN npm install
 RUN npm run build
 
